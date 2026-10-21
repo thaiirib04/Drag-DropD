@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Nutricional - Drag and Drop D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>🍎 Desafio Nutricional</h1>
+        
+        <div class="score-board">
+            Pontuação: <span id="score">0</span>
+        </div>
+
+        <!-- Área dos alimentos -->
+        <div class="food-container" id="food-container">
+            <div class="food-item" draggable="true" ondragstart="drag(event)" id="maca" data-type="healthy">
+                🍎 Maçã
+            </div>
+            <div class="food-item" draggable="true" ondragstart="drag(event)" id="hamburguer" data-type="junk">
+                🍔 Hambúrguer
+            </div>
+            <div class="food-item" draggable="true" ondragstart="drag(event)" id="banana" data-type="healthy">
+                🍌 Banana
+            </div>
+            <div class="food-item" draggable="true" ondragstart="drag(event)" id="refrigerante" data-type="junk">
+                🥤 Refrigerante
+            </div>
+        </div>
+
+        <!-- Área da cesta / zona de soltura -->
+        <div class="drop-zone" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <p>🥣 Solte apenas frutas e vegetais aqui!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
